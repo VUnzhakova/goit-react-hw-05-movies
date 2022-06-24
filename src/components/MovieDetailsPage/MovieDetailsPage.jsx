@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import api from '../../services/api';
 import Loader from 'components/Loader/Loader';
-import { FcLeft } from 'react-icons/fc';
+import { FcSearch } from 'react-icons/fc';
 import s from './MovieDetailsPage.module.css';
 
 const MovieDetailsPage = () => {
@@ -30,7 +30,7 @@ const MovieDetailsPage = () => {
     <>
       <Link to={location?.state?.from ?? '/movies'}>
         <button type="button">
-          <FcLeft /> Go back
+          <FcSearch /> Go back
         </button>
       </Link>
       {loading && <Loader />}
